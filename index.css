@@ -1,0 +1,31 @@
+.sliding-check {
+  -webkit-appearance: none;
+  background: #c6c6c6;
+  position: relative;
+  outline: none;
+  border-radius: 20px;
+  box-shadow: inset 0 0 5px rgba(0, 0, 0, 0.2);
+  transition: all 0.5s;
+  padding: 5px;
+  width: 64px;
+  height: 22px;
+}
+.sliding-check:checked {
+  background: skyblue;
+}
+.sliding-check::before {
+  content: "";
+  position: absolute;
+  width: 35%;
+  height: 100%;
+  border-radius: 9999px;
+  top: 0px;
+  left: 0;
+  transform: scale(1.1);
+  border: 1px solid #3333337c;
+  background: white;
+  transition: all 0.5s;
+}
+.sliding-check:checked:before {
+  left: 60%;
+}
